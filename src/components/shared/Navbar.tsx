@@ -76,10 +76,11 @@ const Navbar = () => {
     : { backgroundColor: "rgba(255, 255, 255, 0.95)", backdropFilter: "blur(16px)", boxShadow: "0 4px 30px rgba(0,0,0,0.06)" };
 
   return (
-    <motion.nav
-      style={navStyle}
-      className="fixed top-0 left-0 right-0 z-50"
-    >
+    <>
+      <motion.nav
+        style={navStyle}
+        className="fixed top-0 left-0 right-0 z-50"
+      >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-10 h-[72px] md:h-[88px] flex items-center justify-between transition-all duration-300">
         
         {/* ——— Logo ——— */}
@@ -154,6 +155,8 @@ const Navbar = () => {
         </button>
       </div>
 
+      </motion.nav>
+
       {/* ——— Mobile Fullscreen Menu ——— */}
       <AnimatePresence>
         {isOpen && (
@@ -197,7 +200,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   );
 };
 

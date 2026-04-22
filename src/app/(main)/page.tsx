@@ -47,7 +47,7 @@ export default function HomePage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-24 gap-8">
             <div data-aos="fade-right">
               <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-6 block">The Foundation</span>
               <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
@@ -218,7 +218,7 @@ export default function HomePage() {
       {/* Featured Winners */}
       <section className="py-28 px-6 md:px-10 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6" data-aos="fade-up">
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6" data-aos="fade-up">
             <div>
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 block">Hall of Fame</span>
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-accent italic">Recent Winners</h2>
