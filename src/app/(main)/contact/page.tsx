@@ -25,7 +25,7 @@ export default function ContactPage() {
           <span className="inline-block py-1.5 px-5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-gold-light text-[10px] font-bold tracking-[0.4em] uppercase mb-8 shadow-2xl">
             Get In Touch
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
             Let&apos;s <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">
               Connect
@@ -81,7 +81,7 @@ export default function ContactPage() {
         <div className="relative z-10 max-w-4xl mx-auto">
           <div className="text-center mb-16" data-aos="fade-up">
             <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 block">Send a Message</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-black text-white italic">Reach Out</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-white italic">Reach Out</h2>
           </div>
 
           <form

@@ -50,7 +50,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
             <div data-aos="fade-right">
               <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-6 block">The Foundation</span>
-              <h2 className="text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
                 Our <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">Pillars</span>
               </h2>
@@ -77,7 +77,7 @@ export default function HomePage() {
                 <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 3s linear infinite' }} />
                 
                 <div className="relative">
-                  <span className="block font-serif text-6xl md:text-8xl font-black italic text-white/5 group-hover:text-gold/10 transition-colors duration-700 mb-8">
+                  <span className="block font-serif text-5xl sm:text-6xl md:text-8xl font-black italic text-white/5 group-hover:text-gold/10 transition-colors duration-700 mb-8">
                     {item.num}
                   </span>
                   
@@ -110,7 +110,7 @@ export default function HomePage() {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-20" data-aos="fade-up">
-            <h2 className="text-5xl md:text-6xl font-serif font-black text-white italic mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black text-white italic mb-6">
               The <span className="text-gold">Empire</span>
             </h2>
             <div className="w-24 h-1 bg-gold mb-8" />
@@ -221,7 +221,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6" data-aos="fade-up">
             <div>
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 block">Hall of Fame</span>
-              <h2 className="text-4xl md:text-6xl font-serif font-black text-accent italic">Recent Winners</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-accent italic">Recent Winners</h2>
             </div>
             <Link href="/gallery" className="btn-gold-light !text-[10px] !px-6 !py-3">
               View All
@@ -260,7 +260,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="py-24 px-6 md:px-10 bg-accent">
         <div className="max-w-4xl mx-auto text-center" data-aos="zoom-in">
-          <h2 className="text-4xl md:text-6xl font-serif font-black text-white italic mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-white italic mb-6">
             Know Someone <span className="text-gold">Exceptional?</span>
           </h2>
           <p className="text-white/60 text-base md:text-lg font-medium mb-10 max-w-2xl mx-auto">

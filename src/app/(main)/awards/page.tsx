@@ -67,7 +67,7 @@ export default function AwardsPage() {
           <span className="inline-block py-1.5 px-5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-gold-light text-[10px] font-bold tracking-[0.4em] uppercase mb-8 shadow-2xl">
             Award Categories
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
             Distinctions That <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">
               Define Excellence
@@ -113,7 +113,7 @@ export default function AwardsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20" data-aos="fade-up">
             <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 block">How It Works</span>
-            <h2 className="text-4xl md:text-6xl font-serif font-black text-accent italic">Selection Process</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-accent italic">Selection Process</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {process.map((p, i) => (
@@ -137,7 +137,7 @@ export default function AwardsPage() {
       {/* CTA */}
       <section className="py-24 px-6 md:px-10 bg-accent">
         <div className="max-w-4xl mx-auto text-center" data-aos="zoom-in">
-          <h2 className="text-4xl md:text-5xl font-serif font-black text-white italic mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-white italic mb-6">
             Ready to <span className="text-gold">Nominate?</span>
           </h2>
           <p className="text-white/60 text-base font-medium mb-10 max-w-xl mx-auto">

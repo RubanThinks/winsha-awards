@@ -40,7 +40,7 @@ export default async function GalleryPage() {
           <span className="inline-block py-1.5 px-5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-gold-light text-[10px] font-bold tracking-[0.4em] uppercase mb-8 shadow-2xl">
             Hall of Fame
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
             Gallery of <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">
               Excellence
@@ -58,7 +58,7 @@ export default async function GalleryPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16" data-aos="fade-up">
             <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-3 block">Laureates</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-black text-accent italic">Past Winners</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-accent italic">Past Winners</h2>
           </div>
 
           {winners.length > 0 ? (
@@ -96,7 +96,7 @@ export default async function GalleryPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16" data-aos="fade-up">
             <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-3 block">Moments</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-black text-accent italic">Event Highlights</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-accent italic">Event Highlights</h2>
           </div>
 
           {galleryItems.length > 0 ? (

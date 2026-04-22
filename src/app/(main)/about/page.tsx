@@ -45,7 +45,7 @@ export default function AboutPage() {
             <span className="inline-block py-1.5 px-5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-gold-light text-[10px] font-bold tracking-[0.4em] uppercase mb-8 shadow-2xl">
               About Winsha Groups
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5rem] font-serif font-black text-white italic mb-8 leading-[0.9] drop-shadow-2xl">
               Building Empires <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">
                 of Excellence
@@ -96,7 +96,7 @@ export default function AboutPage() {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-20" data-aos="fade-up">
-            <h2 className="text-5xl md:text-6xl font-serif font-black text-white italic mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black text-white italic mb-6">
               The <span className="text-gold">Empire</span>
             </h2>
             <div className="w-24 h-1 bg-gold mb-8" />
@@ -209,7 +209,7 @@ export default function AboutPage() {
             <div className="absolute top-0 left-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-top 3s linear infinite' }} />
             
             <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-4 block">Mission</span>
-            <h3 className="text-4xl font-serif font-black text-white italic mb-6">Why We Exist</h3>
+            <h3 className="text-3xl sm:text-4xl font-serif font-black text-white italic mb-6">Why We Exist</h3>
             <p className="text-white/40 text-base md:text-lg font-medium leading-relaxed group-hover:text-white/70 transition-colors duration-500">
               To identify, celebrate, and elevate the individuals and organisations whose 
               commitment to excellence creates lasting value for industries and communities worldwide. 
@@ -220,7 +220,7 @@ export default function AboutPage() {
             <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 3s linear infinite' }} />
             
             <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-4 block">Vision</span>
-            <h3 className="text-4xl font-serif font-black text-white italic mb-6">Where We&apos;re Heading</h3>
+            <h3 className="text-3xl sm:text-4xl font-serif font-black text-white italic mb-6">Where We&apos;re Heading</h3>
             <p className="text-white/40 text-base md:text-lg font-medium leading-relaxed group-hover:text-white/70 transition-colors duration-500">
               To become the world&apos;s most respected platform for business recognition — 
               where merit speaks louder than marketing and impact outweighs influence.
@@ -241,7 +241,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-24" data-aos="fade-up">
             <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-6 block">Foundation</span>
-            <h2 className="text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
               Our Core <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">Values</span>
             </h2>
@@ -263,7 +263,7 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 3s linear infinite' }} />
                 
                 <div className="relative">
-                  <span className="block font-serif text-6xl md:text-8xl font-black italic text-white/5 group-hover:text-gold/10 transition-colors duration-700 mb-8">
+                  <span className="block font-serif text-5xl sm:text-6xl md:text-8xl font-black italic text-white/5 group-hover:text-gold/10 transition-colors duration-700 mb-8">
                     {item.num}
                   </span>
                   
@@ -295,7 +295,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-24" data-aos="fade-up">
             <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-6 block">Journey</span>
-            <h2 className="text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
               The Legacy <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-white to-gold">Sequence</span>
             </h2>

@@ -51,7 +51,7 @@ const Hero = () => {
           <span className="inline-block px-5 py-2 mb-6 text-[10px] font-bold tracking-[0.4em] uppercase bg-black/30 backdrop-blur-md border border-white/10 text-gold-light rounded-full shadow-lg">
             The Standard of Distinction
           </span>
-          <h1 className="text-6xl md:text-8xl lg:text-[8rem] font-serif font-black mb-6 tracking-tight text-white leading-[0.85] italic drop-shadow-2xl">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[8rem] font-serif font-black mb-6 tracking-tight text-white leading-[0.85] italic drop-shadow-2xl">
             Winsha <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold drop-shadow-lg">
               Awards

@@ -28,10 +28,15 @@
     scrollbar-color: #B8860B transparent;
   }
 
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   body {
     background: var(--background);
     color: var(--foreground);
-    @apply antialiased selection:bg-gold selection:text-white font-sans overflow-x-hidden;
+    @apply antialiased selection:bg-gold selection:text-white font-sans;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
