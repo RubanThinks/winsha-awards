@@ -68,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-gold w-5 h-5 flex-shrink-0 mt-1" />
-                <span className="text-gray-400 text-sm font-medium">Winsha Groups,<br />Salem, Tamil Nadu,<br />India.</span>
+                <span className="text-gray-400 text-sm font-medium">Winsha Groups,<br />Coimbatore, Tamil Nadu,<br />India.</span>
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="text-gold w-5 h-5 flex-shrink-0" />

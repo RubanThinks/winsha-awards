@@ -53,7 +53,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-white/80 text-base md:text-lg font-medium leading-relaxed max-w-xl mb-8 drop-shadow-md">
               <strong className="text-white">Winsha Groups</strong> is a diversified business conglomerate headquartered 
-              in Salem, Tamil Nadu, India. With operations spanning real estate, international trade, 
+              in Coimbatore, Tamil Nadu, India. With operations spanning real estate, international trade, 
               technology, and community development, our group has been at the forefront of 
               transformational business for over a decade.
             </p>
