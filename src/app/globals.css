@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFFFFF;
+  --color-secondary: #F4F5F7;
+  --color-accent: #111827;
+  --color-gold: #B8860B;
+  --color-gold-light: #D4AF37;
+  --color-soft-grey: #6B7280;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-nav: "DM Sans", sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #111827;
+    --border: rgba(0, 0, 0, 0.06);
+    --gold: 184 134 11;
+  }
+
+  * {
+    border-color: var(--border);
+    scrollbar-width: thin;
+    scrollbar-color: #B8860B transparent;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    @apply antialiased selection:bg-gold selection:text-white font-sans overflow-x-hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  /* Navigation & button labels use DM Sans for sharpness */
+  .font-nav, nav, button, a[class*="btn-"] {
+    font-family: var(--font-nav);
+  }
+}
+
+@layer utilities {
+  .frozen {
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .frozen-card {
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .frozen-card:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(184, 134, 11, 0.15);
+    box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
+  }
+
+  .input-minimal {
+    @apply bg-transparent border-b-2 border-black/10 py-3 transition-all focus:border-gold outline-none w-full text-accent placeholder:text-soft-grey/40;
+  }
+
+  .peripheral-glow {
+    @apply fixed inset-0 pointer-events-none z-[-1] opacity-80;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(184, 134, 11, 0.02), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(17, 24, 39, 0.02), transparent 50%);
+  }
+
+  .section-alt {
+    @apply bg-[#F4F5F7];
+  }
+
+  /* Footer Architectural Pattern */
+  .footer-pattern {
+    background-color: #030303;
+    background-image: 
+      linear-gradient(30deg, #0d0d0d 12%, transparent 12.5%, transparent 87%, #0d0d0d 87.5%, #0d0d0d),
+      linear-gradient(150deg, #0d0d0d 12%, transparent 12.5%, transparent 87%, #0d0d0d 87.5%, #0d0d0d),
+      linear-gradient(30deg, #0d0d0d 12%, transparent 12.5%, transparent 87%, #0d0d0d 87.5%, #0d0d0d),
+      linear-gradient(150deg, #0d0d0d 12%, transparent 12.5%, transparent 87%, #0d0d0d 87.5%, #0d0d0d),
+      linear-gradient(60deg, #151515 25%, transparent 25.5%, transparent 75%, #151515 75%, #151515),
+      linear-gradient(60deg, #151515 25%, transparent 25.5%, transparent 75%, #151515 75%, #151515);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  }
+
+  /* ——— Modern Animated Button System (The "Shooting Gold" Style) ——— */
+
+  @keyframes shooting-top {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes shooting-bottom {
+    0% { right: -100%; }
+    100% { right: 100%; }
+  }
+
+  /* Universal "Shooting Gold" Obsidian Button */
+  .btn-ghost,
+  .btn-gold-solid,
+  .btn-cta {
+    @apply relative inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full font-bold uppercase overflow-hidden isolate;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    background: #000000 !important; /* Force black core */
+    color: #FFFFFF !important; /* Force white text */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* The Top Shooting Line */
+  .btn-ghost::before,
+  .btn-gold-solid::before,
+  .btn-cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent);
+    animation: shooting-top 3s linear infinite;
+    z-index: 1;
+  }
+
+  /* The Bottom Shooting Line */
+  .btn-ghost::after,
+  .btn-gold-solid::after,
+  .btn-cta::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent);
+    animation: shooting-bottom 3s linear infinite;
+    z-index: 1;
+  }
+
+  /* Hover Effects */
+  .btn-ghost:hover,
+  .btn-gold-solid:hover,
+  .btn-cta:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 20px 40px -15px rgba(255, 215, 0, 0.3);
+    color: #FFD700 !important;
+  }
+
+  .btn-ghost:active,
+  .btn-gold-solid:active,
+  .btn-navy:active,
+  .btn-cta:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  /* Navy Theme Variant with Shooting Gold */
+  .btn-navy {
+    @apply relative inline-flex items-center justify-center gap-3 px-8 py-3 rounded-full font-bold uppercase overflow-hidden isolate;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    background: #0a1128 !important; /* Deep Navy Blue */
+    color: #FFFFFF !important;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+  }
+
+  .btn-navy::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 70%; height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent);
+    animation: shooting-top 3s linear infinite;
+    z-index: 1;
+  }
+
+  .btn-navy::after {
+    content: "";
+    position: absolute;
+    bottom: 0; right: -100%;
+    width: 70%; height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent);
+    animation: shooting-bottom 3s linear infinite;
+    z-index: 1;
+  }
+
+  .btn-navy:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 128, 0.3), 0 0 15px rgba(255, 215, 0, 0.1);
+    color: #FFD700 !important;
+  }
+
+  /* White Theme Variant for Navbar/Light sections */
+  .btn-gold-light {
+    @apply relative inline-flex items-center justify-center gap-3 px-7 py-2.5 rounded-full font-bold uppercase overflow-hidden isolate;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    background: #FFFFFF !important;
+    color: #111827 !important;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-gold-light::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    animation: shooting-top 2s linear infinite;
+  }
+
+  .btn-gold-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+    color: #B8860B !important;
+  }
+
+  /* Ghost Outline: Minimal geometric border */
+  .btn-ghost-outline {
+    @apply relative inline-flex items-center gap-3 px-9 py-4 rounded-full font-bold uppercase;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    background: transparent;
+    border: 1.5px solid rgba(17, 24, 39, 0.15);
+    color: #111827;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-ghost-outline:hover {
+    border-color: #B8860B;
+    color: #B8860B;
+    background: rgba(184, 134, 11, 0.04);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -10px rgba(184, 134, 11, 0.2);
+  }
+
+  .btn-ghost-outline:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+/* Custom Scrollbar - Hidden as requested */
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8860B;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #966d09;
+}
