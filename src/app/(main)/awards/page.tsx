@@ -86,9 +86,10 @@ export default function AwardsPage() {
           {categories.map((cat, i) => (
             <div
               key={i}
+              id={cat.title.toLowerCase().replace(/\s+/g, '-')}
               data-aos="fade-up"
               data-aos-delay={i * 80}
-              className="frozen-card bg-white p-10 group flex flex-col"
+              className="frozen-card bg-white p-10 group flex flex-col scroll-mt-32"
             >
               <div className={`w-16 h-16 ${cat.color} rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-400`}>
                 {cat.icon}

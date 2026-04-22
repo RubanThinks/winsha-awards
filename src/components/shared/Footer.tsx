@@ -54,11 +54,11 @@ const Footer = () => {
           <div>
             <h4 className="text-white text-xs font-bold uppercase tracking-[0.2em] mb-6 border-l-2 border-gold pl-4">Distinctions</h4>
             <ul className="space-y-4">
-              <li className="text-gray-400 text-sm font-medium hover:text-gold cursor-pointer transition-colors">Young Entrepreneur</li>
-              <li className="text-gray-400 text-sm font-medium hover:text-gold cursor-pointer transition-colors">Lifetime Achievement</li>
-              <li className="text-gray-400 text-sm font-medium hover:text-gold cursor-pointer transition-colors">Innovation Leader</li>
-              <li className="text-gray-400 text-sm font-medium hover:text-gold cursor-pointer transition-colors">Community Impact</li>
-              <li className="text-gray-400 text-sm font-medium hover:text-gold cursor-pointer transition-colors">Emerging Brand</li>
+              <li><Link href="/awards#young-entrepreneur" className="text-gray-400 text-sm font-medium hover:text-gold transition-colors">Young Entrepreneur</Link></li>
+              <li><Link href="/awards#lifetime-achievement" className="text-gray-400 text-sm font-medium hover:text-gold transition-colors">Lifetime Achievement</Link></li>
+              <li><Link href="/awards#innovation-leader" className="text-gray-400 text-sm font-medium hover:text-gold transition-colors">Innovation Leader</Link></li>
+              <li><Link href="/awards#community-impact" className="text-gray-400 text-sm font-medium hover:text-gold transition-colors">Community Impact</Link></li>
+              <li><Link href="/awards#emerging-brand" className="text-gray-400 text-sm font-medium hover:text-gold transition-colors">Emerging Brand</Link></li>
             </ul>
           </div>
 
