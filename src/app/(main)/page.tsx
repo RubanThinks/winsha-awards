@@ -22,7 +22,7 @@ import Hero from "@/components/home/Hero";
 import { getFeaturedWinners } from "@/app/actions/firestore";
 
 export default function HomePage() {
-  const [winners, setWinners] = useState([]);
+  const [winners, setWinners] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchWinners = async () => {
