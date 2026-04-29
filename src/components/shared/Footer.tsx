@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed font-medium">
-              A flagship initiative by Winsha Groups — elevating business excellence on a global scale. We identify and celebrate the visionaries who redefine the corporate landscape.
+              WINSHA Awards is a recognition platform that honors excellence in business, entrepreneurship, service, innovation, and industry leadership.
             </p>
             <div className="flex items-center space-x-5">
               <a href="#" className="text-gold hover:text-white transition-colors duration-300" aria-label="Instagram">
@@ -68,15 +68,15 @@ const Footer = () => {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-gold w-5 h-5 flex-shrink-0 mt-1" />
-                <span className="text-gray-400 text-sm font-medium">Winsha Groups,<br />Coimbatore, Tamil Nadu,<br />India.</span>
+                <span className="text-gray-400 text-sm font-medium">No.133, Amarar Jeevantham Road,<br />7th Street Extension, Rathinapuri,<br />Coimbatore - 12</span>
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="text-gold w-5 h-5 flex-shrink-0" />
-                <span className="text-gray-400 text-sm font-medium">awards@winshagroups.com</span>
+                <span className="text-gray-400 text-sm font-medium">infowinshagroups@gmail.com</span>
               </li>
               <li className="flex items-center space-x-4">
                 <Phone className="text-gold w-5 h-5 flex-shrink-0" />
-                <span className="text-gray-400 text-sm font-medium">+91 90475 90675</span>
+                <span className="text-gray-400 text-sm font-medium">0422-4970505 / 9344966966</span>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">
-            &copy; {new Date().getFullYear()} Winsha Groups. Legacy of Excellence.
+            &copy; {new Date().getFullYear()} WINSHA Awards. Make Meaningful Differences. All Rights Reserved.
           </p>
           <div className="flex items-center space-x-8 text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">
             <a href="#" className="hover:text-gold transition-colors">Governance</a>

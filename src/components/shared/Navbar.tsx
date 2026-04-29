@@ -121,6 +121,18 @@ const Navbar = () => {
               )}
             </Link>
           ))}
+          <a
+            href="https://github.com/RubanThinks/winsha-awards/releases/download/catelogue/WINSHA.CATALOGUE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`font-nav text-[11px] font-bold tracking-[0.1em] uppercase px-5 py-2 rounded-full transition-all duration-300 border ${
+              isScrolledState
+                ? "bg-accent text-white border-accent hover:bg-transparent hover:text-accent"
+                : "bg-white text-black border-white hover:bg-transparent hover:text-white"
+            }`}
+          >
+            Download Catalogue
+          </a>
         </div>
 
         {/* ——— Mobile Hamburger / Close Button ——— */}
@@ -187,14 +199,32 @@ const Navbar = () => {
               ))}
 
 
+              {/* Mobile download button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.06, duration: 0.3 }}
+                className="mt-4 mb-auto"
+              >
+                <a
+                  href="https://github.com/RubanThinks/winsha-awards/releases/download/catelogue/WINSHA.CATALOGUE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block font-nav text-[12px] font-bold uppercase tracking-[0.1em] px-6 py-3 rounded-full bg-accent text-white border border-accent hover:bg-transparent hover:text-accent transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Download Catalogue
+                </a>
+              </motion.div>
+
               {/* Mobile brand footer */}
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="mt-auto pt-8 text-accent/20 text-[10px] font-nav font-semibold tracking-[0.2em] uppercase"
+                className="mt-4 pt-8 text-accent/20 text-[10px] font-nav font-semibold tracking-[0.2em] uppercase"
               >
-                Winsha Groups &mdash; Excellence Redefined
+                WINSHA Awards &mdash; Make Meaningful Differences
               </motion.p>
             </div>
           </motion.div>

@@ -45,9 +45,9 @@ export default function ContactPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {[
-            { icon: <MapPin className="w-6 h-6" />, title: "Visit Us", info: "Winsha Groups Headquarters\nCoimbatore, Tamil Nadu, India" },
-            { icon: <Mail className="w-6 h-6" />, title: "Email Us", info: "awards@winshagroups.com\ninfo@winsha.com" },
-            { icon: <Phone className="w-6 h-6" />, title: "Call Us", info: "+91 90475 90675\nMon - Fri, 9 AM - 6 PM IST" },
+            { icon: <MapPin className="w-6 h-6" />, title: "Coimbatore Office", info: "No.133, Amarar Jeevantham Road,\n7th Street Extension, Rathinapuri,\nCoimbatore - 12\nPhone: 0422-4970505 / 9344966966" },
+            { icon: <MapPin className="w-6 h-6" />, title: "Madurai Office", info: "No.15/A, Ramapathiran Street,\nOpp Library, 2nd Stop, Thirunagar,\nMadurai - 6" },
+            { icon: <Mail className="w-6 h-6" />, title: "Connect Online", info: "Email: infowinshagroups@gmail.com\nWebsite: www.winshaawards.com" },
           ].map((item, i) => (
             <div
               key={i}

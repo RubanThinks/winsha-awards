@@ -2,20 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { 
   Award, 
-  Star, 
-  Briefcase, 
-  Users, 
   ArrowRight, 
-  Building2, 
-  Globe, 
-  Lightbulb, 
-  Users2,
-  ChevronRight,
-  Sparkles,
-  Trophy
+  Star
 } from "lucide-react";
 import ImageCard from "@/components/shared/ImageCard";
 import Hero from "@/components/home/Hero";
@@ -32,183 +22,88 @@ export default function HomePage() {
     fetchWinners();
   }, []);
 
+  const partners = [
+    { name: "Krishna", role: "Partner" },
+    { name: "Universale", role: "Partner" },
+    { name: "Branding & Digital Marketing Partners", role: "Partners" },
+    { name: "Latlon Technologies", role: "Partner" },
+    { name: "Hospitality Partner", role: "Partner" },
+    { name: "Fortune Pandiyan Hotel Madurai", role: "Partner" }
+  ];
+
   return (
     <div className="flex flex-col">
       <Hero />
 
-      {/* Pillars — Architectural Showcase */}
+      {/* Media / Promotion Partners */}
       <section className="py-32 px-6 md:px-10 bg-[#050505] relative overflow-hidden">
-        {/* Structural Background Lines */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gold" />
-          <div className="absolute top-0 left-2/4 w-[1px] h-full bg-gold" />
-          <div className="absolute top-0 left-3/4 w-[1px] h-full bg-gold" />
-          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gold" />
-        </div>
-
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-24 gap-8">
-            <div data-aos="fade-right">
-              <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-6 block">The Foundation</span>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif font-black text-white italic leading-[0.85]">
-                Our <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">Pillars</span>
-              </h2>
-            </div>
-            <p className="max-w-md text-white/40 text-sm font-medium leading-relaxed mb-4" data-aos="fade-left">
-              These core values form the structural integrity of Winsha Groups, 
-              ensuring that every vision we celebrate is built upon a legacy of absolute excellence.
-            </p>
+          <div className="text-center mb-20" data-aos="fade-up">
+            <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-4 block">Collaborators</span>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-white italic">Media & Promotion Partners</h2>
           </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* KRISHNA */}
+            <div className="bg-[#0a0a0a] border border-white/5 p-8 rounded-3xl flex flex-col items-center justify-center hover:bg-gold/[0.05] transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+              <span className="text-[10px] font-bold tracking-[0.2em] text-white/50 mb-6 uppercase text-center w-full bg-[#E57A3D] py-1.5 text-white shadow-sm">Media Partner</span>
+              <div className="bg-[#790000] border-[4px] border-[#FFFF00] rounded-md px-6 py-2 shadow-lg w-full max-w-[200px] flex items-center justify-center mt-auto mb-auto">
+                <span className="text-white text-3xl font-bold tracking-wider font-sans">KRISHNA</span>
+              </div>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 border-l border-white/5" data-aos="fade-up">
-            {[
-              { num: "01", title: "Excellence", icon: <Award className="w-5 h-5" />, desc: "Setting the gold standard in every endeavor." },
-              { num: "02", title: "Innovation", icon: <Star className="w-5 h-5" />, desc: "Architecting the future through creative vision." },
-              { num: "03", title: "Leadership", icon: <Briefcase className="w-5 h-5" />, desc: "Guiding industries with integrity and purpose." },
-              { num: "04", title: "Community", icon: <Users className="w-5 h-5" />, desc: "Building empires that empower the people." },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`group relative p-10 md:p-14 border-r border-b border-white/5 transition-all duration-700 hover:bg-gold/[0.03] overflow-hidden ${i % 2 !== 0 ? 'md:mt-12' : ''}`}
-              >
-                {/* Shooting Neon Gold Lines (Exact Button Style - Continuous) */}
-                <div className="absolute top-0 left-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-top 3s linear infinite' }} />
-                <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 3s linear infinite' }} />
-                
-                <div className="relative">
-                  <span className="block font-serif text-5xl sm:text-6xl md:text-8xl font-black italic text-white/5 group-hover:text-gold/10 transition-colors duration-700 mb-8">
-                    {item.num}
-                  </span>
-                  
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all duration-500">
-                      {item.icon}
-                    </div>
-                    <h3 className="text-xl font-serif font-black text-white italic group-hover:text-gold transition-colors duration-500">
-                      {item.title}
-                    </h3>
+            {/* UTV UNIVERSAL */}
+            <div className="bg-[#0a0a0a] border border-white/5 p-8 rounded-3xl flex flex-col items-center justify-center hover:bg-gold/[0.05] transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+              <span className="text-[10px] font-bold tracking-[0.2em] text-white/50 mb-6 uppercase text-center w-full bg-[#E57A3D] py-1.5 text-white shadow-sm">Media Partner</span>
+              <div className="border border-gray-300 rounded-xl px-6 py-4 shadow-sm w-full max-w-[160px] flex flex-col items-center justify-center bg-white mt-auto mb-auto">
+                <div className="flex items-center gap-0.5 leading-none mb-1">
+                  <span className="text-[#5a953e] text-[40px] font-black font-sans tracking-tighter">U</span>
+                  <span className="text-[#a88e5b] text-[32px] font-black font-sans mt-2 tracking-tighter">TV</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="text-[#3b3a53] text-[9px] font-bold tracking-[0.1em] uppercase">Universal</span>
+                  <div className="w-1.5 h-1.5 bg-[#e37d22]" />
+                </div>
+              </div>
+            </div>
+
+            {/* LATLON TECHNOLOGIES */}
+            <div className="bg-[#0a0a0a] border border-white/5 p-8 rounded-3xl flex flex-col items-center justify-center hover:bg-gold/[0.05] transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+              <span className="text-[10px] font-bold tracking-[0.2em] text-white/50 mb-6 uppercase text-center w-full bg-[#E57A3D] py-1.5 px-2 text-white shadow-sm leading-tight">Branding & Digital Marketing Partner</span>
+              <div className="w-full max-w-[240px] flex items-center justify-center gap-3 mt-auto mb-auto bg-white py-4 px-2 rounded-xl">
+                <div className="relative w-8 h-8 flex-shrink-0">
+                  <div className="absolute top-[8px] left-0 w-full h-[3px] bg-[#4A5568]" />
+                  <div className="absolute top-[20px] left-0 w-full h-[3px] bg-[#3182CE]" />
+                  <div className="absolute top-0 left-[8px] w-[3px] h-full bg-[#3182CE] -skew-x-12" />
+                  <div className="absolute top-0 left-[20px] w-[3px] h-full bg-[#4A5568] -skew-x-12" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[#3182CE] text-2xl font-light tracking-widest font-sans uppercase leading-none mb-1">Latlon</span>
+                  <span className="text-[#4A5568] text-[9px] font-medium tracking-[0.2em] uppercase leading-none">Technologies</span>
+                </div>
+              </div>
+            </div>
+
+            {/* FORTUNE PANDIYAN HOTEL */}
+            <div className="bg-[#0a0a0a] border border-white/5 p-8 rounded-3xl flex flex-col items-center justify-center hover:bg-gold/[0.05] transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+              <span className="text-[10px] font-bold tracking-[0.2em] text-white/50 mb-6 uppercase text-center w-full bg-[#E57A3D] py-1.5 text-white shadow-sm">Hospitality Partner</span>
+              <div className="w-full max-w-[200px] flex flex-col items-center justify-center mt-auto mb-auto bg-white py-4 px-4 rounded-xl">
+                <div className="flex items-baseline relative">
+                  <span className="text-[#1A365D] text-xl font-serif font-bold tracking-wider">F</span>
+                  <span className="text-[#1A365D] text-xl font-serif font-bold tracking-wider relative z-10">O</span>
+                  <div className="absolute top-0 left-[12px] w-6 h-6 rounded-full border-t-4 border-[#C69C6D] -rotate-45 z-0" />
+                  <span className="text-[#1A365D] text-xl font-serif font-bold tracking-wider">RTUNE</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1 mb-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M4 22H20V20H18V12H20V10H16V6H14V2H10V6H8V10H4V12H6V20H4V22ZM10 4H14V6H10V4ZM8 8H16V10H8V8ZM8 12H10V20H8V12ZM14 12H16V20H14V12Z"/></svg>
+                  <div className="flex flex-col items-start leading-none gap-0.5">
+                    <span className="text-black text-[12px] font-black font-sans uppercase tracking-[0.2em]">Pandiyan</span>
+                    <span className="text-black text-[10px] font-black font-sans uppercase tracking-[0.2em]">Hotel</span>
                   </div>
-                  
-                  <p className="text-white/40 text-sm leading-relaxed group-hover:text-white/70 transition-colors duration-500">
-                    {item.desc}
-                  </p>
                 </div>
-                
-                {/* Floating Corner Accent */}
-                <div className="absolute bottom-6 right-6 w-8 h-8 border-r-2 border-b-2 border-gold/0 group-hover:border-gold/40 transition-all duration-700 translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Business Verticals — The Empire Story */}
-      <section className="py-32 px-6 md:px-10 bg-[#020202] relative overflow-hidden">
-        {/* Ambient Glow */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="mb-20" data-aos="fade-up">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black text-white italic mb-6">
-              The <span className="text-gold">Empire</span>
-            </h2>
-            <div className="w-24 h-1 bg-gold mb-8" />
-            <p className="text-white/40 max-w-2xl font-medium leading-relaxed">
-              From the foundations of global trade to the heights of technological innovation, 
-              Winsha Groups architects a future defined by diverse excellence.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-            {/* Real Estate - The Foundation (Large Vertical) */}
-            <div 
-              className="md:col-span-7 group relative rounded-[40px] bg-[#080808] border border-white/5 p-10 md:p-14 overflow-hidden min-h-[450px] flex flex-col justify-end"
-              data-aos="fade-right"
-            >
-              <div className="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
-                <Building2 className="w-40 h-40 text-gold" />
-              </div>
-              {/* Shooting Neon Gold Lines */}
-              <div className="absolute top-0 left-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-top 3s linear infinite' }} />
-              <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 3s linear infinite' }} />
-              
-              <div className="relative z-10">
-                <span className="text-xs font-bold tracking-[0.4em] uppercase text-gold mb-4 block">Architectural Legacy</span>
-                <h3 className="text-3xl md:text-4xl font-serif font-black text-white mb-6">Real Estate & Construction</h3>
-                <p className="text-white/50 text-sm md:text-base leading-relaxed max-w-lg">
-                  Precision-engineered residential and commercial marvels that redefine modern living landscapes.
-                </p>
-              </div>
-            </div>
-
-            {/* International Trade - The Network */}
-            <div 
-              className="md:col-span-5 group relative rounded-[40px] bg-[#0a0a0a] border border-white/5 p-10 overflow-hidden min-h-[450px] flex flex-col"
-              data-aos="fade-left"
-            >
-              <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-700">
-                <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #C5A028 1px, transparent 0)', backgroundSize: '30px 30px' }} />
-              </div>
-              {/* Shooting Neon Gold Lines */}
-              <div className="absolute top-0 left-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-top 4s linear infinite' }} />
-              <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 4s linear infinite' }} />
-              
-              <div className="mt-auto relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-8">
-                  <Globe className="w-6 h-6" />
+                <div className="w-full border-t border-black/20 mt-1 pt-1 text-center">
+                  <span className="text-[#1A365D] text-[8px] font-medium tracking-[0.3em] uppercase">Madurai</span>
                 </div>
-                <h3 className="text-2xl font-serif font-black text-white mb-4">International Trade</h3>
-                <p className="text-white/40 text-sm leading-relaxed">
-                  Connecting continents through strategic import-export operations across the Middle East, Asia, and Europe.
-                </p>
-              </div>
-            </div>
-
-            {/* Technology - The Future */}
-            <div 
-              className="md:col-span-5 group relative rounded-[40px] bg-[#0a0a0a] border border-white/5 p-10 overflow-hidden min-h-[450px]"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className="absolute inset-0 opacity-5 pointer-events-none">
-                <div className="absolute top-10 left-10 w-[1px] h-40 bg-gold" />
-                <div className="absolute top-10 left-10 w-40 h-[1px] bg-gold" />
-              </div>
-              {/* Shooting Neon Gold Lines */}
-              <div className="absolute top-0 left-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-top 3.5s linear infinite' }} />
-              <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 3.5s linear infinite' }} />
-
-              <div className="h-full flex flex-col relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-8">
-                  <Lightbulb className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-serif font-black text-white mb-4">Technology Solutions</h3>
-                <p className="text-white/40 text-sm leading-relaxed">
-                  Architecting digital transformations through cutting-edge software and cloud infrastructure.
-                </p>
-              </div>
-            </div>
-
-            {/* Community - The Heart */}
-            <div 
-              className="md:col-span-7 group relative rounded-[40px] bg-[#080808] border border-white/5 p-10 md:p-14 overflow-hidden min-h-[450px] flex flex-col justify-center"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-               <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-t from-gold/5 to-transparent pointer-events-none" />
-              {/* Shooting Neon Gold Lines */}
-              <div className="absolute top-0 left-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-top 5s linear infinite' }} />
-              <div className="absolute bottom-0 right-0 w-[70%] h-[2px] opacity-30 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'linear-gradient(90deg, transparent, #FFD700, #FFFFFF, #FFD700, transparent)', animation: 'shooting-bottom 5s linear infinite' }} />
-
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-8">
-                  <Users2 className="w-6 h-6" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-black text-white mb-6">Community Development</h3>
-                <p className="text-white/50 text-sm md:text-base leading-relaxed max-w-lg">
-                  Empowering lives through sustainable impact initiatives in education, healthcare, and infrastructure.
-                </p>
               </div>
             </div>
           </div>
@@ -264,7 +159,7 @@ export default function HomePage() {
             Know Someone <span className="text-gold">Exceptional?</span>
           </h2>
           <p className="text-white/60 text-base md:text-lg font-medium mb-10 max-w-2xl mx-auto">
-            Nominate a visionary leader or groundbreaking company for the next Winsha Awards ceremony.
+            Nominate a visionary leader or groundbreaking company for the next WINSHA Awards ceremony.
           </p>
           <Link href="/contact" className="btn-cta">
             Submit a Nomination

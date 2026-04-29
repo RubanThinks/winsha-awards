@@ -1,57 +1,31 @@
 import { Metadata } from "next";
-import { Award, Star, Users, Briefcase, Gem, Lightbulb, ArrowRight } from "lucide-react";
+import { Award, Star, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Awards | Winsha Awards",
-  description: "Explore the award categories at Winsha Awards — from Young Entrepreneur to Lifetime Achievement, each distinction celebrates a unique facet of excellence.",
+  title: "Awards | WINSHA Awards",
+  description: "Explore the award categories at WINSHA Awards, celebrating excellence across various industries.",
 };
 
 export default function AwardsPage() {
   const categories = [
-    {
-      icon: <Star className="w-8 h-8" />,
-      title: "Young Entrepreneur",
-      desc: "Recognizing visionaries under 35 who are disrupting industries and setting new benchmarks for innovation and ambition.",
-      color: "bg-amber-50",
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Lifetime Achievement",
-      desc: "Honoring decades of sustained excellence, leadership, and contribution to building world-class organizations.",
-      color: "bg-blue-50",
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation Leader",
-      desc: "For those who push the limits of technology, business models, and creative solutions to solve real-world problems.",
-      color: "bg-violet-50",
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Community Impact",
-      desc: "Celebrating businesses that give back — investing in education, healthcare, environment, and social upliftment.",
-      color: "bg-green-50",
-    },
-    {
-      icon: <Briefcase className="w-8 h-8" />,
-      title: "Corporate Excellence",
-      desc: "Awarded to organizations that demonstrate exceptional governance, culture, and operational brilliance.",
-      color: "bg-rose-50",
-    },
-    {
-      icon: <Gem className="w-8 h-8" />,
-      title: "Emerging Brand",
-      desc: "For startups and newcomers that have rapidly gained market trust and consumer confidence in their first five years.",
-      color: "bg-teal-50",
-    },
+    "Restaurants", "Hotels", "Salons", "Mobile Shops", "Home Appliances", "Furniture Shops",
+    "Footwear Shops", "Travels", "Gardening", "Agriculture", "Stationery Shops", "Printing Press",
+    "Security Services", "Garments Manufacturing", "Finance Companies", "Car Accessories",
+    "Mechanical Industry", "Training Institutes", "Media / Local Channels", "Pets Shop",
+    "Home Services", "Real Estate", "Flower Shop", "Computer Sales", "Wedding Planners",
+    "Modular Kitchen", "Currency Exchange", "Photography", "Transporters", "Advertising Agencies",
+    "Car Sales", "Outdoor Caterers", "Electrical & Hardware", "Car Service", "Event Management",
+    "Opticals", "Two Wheeler Sales", "Paint Shops", "Two Wheeler Service", "Textile Shops",
+    "Tiles Showroom", "Fire Safety Services", "Logistics"
   ];
 
-  const process = [
-    { step: "01", title: "Nomination", desc: "Anyone can nominate a deserving individual or organization through our digital platform." },
-    { step: "02", title: "Review", desc: "An independent panel of industry experts evaluates each nomination on merit and impact." },
-    { step: "03", title: "Shortlist", desc: "Finalists are announced across all categories, creating anticipation for the ceremony." },
-    { step: "04", title: "Ceremony", desc: "Winners are celebrated at a grand ceremony — a night of prestige, recognition, and legacy." },
+  const specialTitles = [
+    "Education Excellence Award", "Hospitality Excellence Award", "Service Excellence Award",
+    "Technology Excellence Award", "Global Quality Award", "Best Employer of Choice",
+    "Appreciation Award", "Achievement Award", "Young Entrepreneur Award", "Brand of the Year",
+    "Outstanding Business Leader of the Year", "Outstanding Company of the Year", "Best Small Business",
+    "Best Medium Sized Business", "Best Large Business", "Best Financial Advisor of the Year"
   ];
 
   return (
@@ -74,60 +48,54 @@ export default function AwardsPage() {
             </span>
           </h1>
           <p className="text-white/80 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-            Each category represents a unique facet of achievement. Our awards go beyond 
-            revenue — they recognize vision, integrity, and lasting impact.
+            Each category represents a unique facet of achievement. Our awards celebrate individuals, companies, startups, and organizations that create meaningful impact in their sectors.
           </p>
         </div>
       </section>
 
       {/* Categories Grid */}
       <section className="py-20 px-6 md:px-10 section-alt">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((cat, i) => (
-            <div
-              key={i}
-              id={cat.title.toLowerCase().replace(/\s+/g, '-')}
-              data-aos="fade-up"
-              data-aos-delay={i * 80}
-              className="frozen-card bg-white p-10 group flex flex-col scroll-mt-32"
-            >
-              <div className={`w-16 h-16 ${cat.color} rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-400`}>
-                {cat.icon}
-              </div>
-              <h3 className="text-xl font-serif font-black text-accent italic mb-3">{cat.title}</h3>
-              <p className="text-soft-grey text-sm leading-relaxed flex-grow">{cat.desc}</p>
-              <Link
-                href="/contact"
-                className="btn-navy !px-6 !py-2.5 mt-auto self-start"
-              >
-                Nominate
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Selection Process */}
-      <section className="py-28 px-6 md:px-10 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20" data-aos="fade-up">
-            <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 block">How It Works</span>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-accent italic">Selection Process</h2>
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-accent italic">Industry Categories</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {process.map((p, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {categories.map((cat, i) => (
               <div
                 key={i}
                 data-aos="fade-up"
-                data-aos-delay={i * 120}
-                className="text-center group"
+                data-aos-delay={(i % 10) * 50}
+                className="bg-white p-6 rounded-2xl flex items-center gap-4 border border-black/5 hover:border-gold/30 hover:shadow-lg transition-all duration-300"
               >
-                <span className="text-6xl font-serif font-black text-gold/20 group-hover:text-gold transition-colors italic block mb-4">
-                  {p.step}
-                </span>
-                <h4 className="text-lg font-bold text-accent mb-3">{p.title}</h4>
-                <p className="text-soft-grey text-sm leading-relaxed">{p.desc}</p>
+                <CheckCircle className="w-5 h-5 text-gold shrink-0" />
+                <span className="text-accent font-medium">{cat}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Special Titles Grid */}
+      <section className="py-24 px-6 md:px-10 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 block">Special Titles</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-accent italic">Special Recognition</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {specialTitles.map((title, i) => (
+              <div
+                key={i}
+                data-aos="fade-up"
+                data-aos-delay={(i % 6) * 100}
+                className="group relative p-8 rounded-3xl bg-secondary border border-black/5 overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="flex flex-col gap-4 relative z-10">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-black/5 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-white transition-all duration-500 shadow-sm">
+                    <Star className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-serif font-black text-accent italic group-hover:text-gold transition-colors duration-300">{title}</h3>
+                </div>
               </div>
             ))}
           </div>
